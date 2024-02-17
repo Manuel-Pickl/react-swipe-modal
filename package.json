@@ -1,8 +1,10 @@
 {
   "name": "react-swipe-modal",
-  "private": true,
-  "version": "1.0.0",
+  "private": false,
+  "version": "0.0.1",
   "type": "module",
+  "module": "dist/assets/index-CYhBBV1s.js",
+
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

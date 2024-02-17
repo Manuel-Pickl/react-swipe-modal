@@ -1,3 +1,4 @@
+// App.tsx
 import { useRef } from "react";
 import SwipeModal, { SwipeModalRef } from "./components/SwipeModal/SwipeModal";
 
