@@ -1,6 +1,6 @@
 // App.tsx
 import { useRef } from "react";
-import SwipeModal, { SwipeModalRef } from "./components/SwipeModal/SwipeModal";
+import SwipeModal, { SwipeModalRef } from "./components/SwipeModal/SwipeModal.types";
 
 function App() {
     const swipeModalRef = useRef<SwipeModalRef>(null);
