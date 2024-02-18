@@ -7,9 +7,15 @@ function App() {
     
     return (
         <>
-            <button onClick={() => swipeModalRef.current?.show()}
+            <button 
+                onClick={() => swipeModalRef.current?.show()}
+                style={{
+                    position: "absolute",
+                    inset: 0,
+                    backgroundColor: "transparent",
+                }}
             >
-                Open
+                Click anywhere to open modal
             </button>
 
             <SwipeModal ref={swipeModalRef}>
