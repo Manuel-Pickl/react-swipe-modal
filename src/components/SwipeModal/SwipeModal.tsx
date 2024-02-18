@@ -1,6 +1,6 @@
 // SwipeModal.tsx
 import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from "react";
-import "./SwipeModal.scss";
+import { StyledSwipeModal } from "./SwipeModalStyles";
 
 export interface SwipeModalProps {
     children?: React.ReactNode;
@@ -334,14 +334,11 @@ const SwipeModal = forwardRef<SwipeModalRef, SwipeModalProps>(({
     }));
 
     return (
-        <div 
-            className="SwipeModal"
-            style={{
-                "--animationDurationInMs": `${animationDuration}ms`,
-                "--backdropOpacity": backdropOpacity,
-                "--barColor": barColor,
-                "--modalColor": modalColor,
-            } as React.CSSProperties}
+        <StyledSwipeModal
+            $animationDurationInMs={`${animationDuration}ms`}
+            $backdropOpacity={backdropOpacity}
+            $barColor={barColor}
+            $modalColor={modalColor}
         >
             <div
                 ref={backdropRef}
@@ -369,7 +366,7 @@ const SwipeModal = forwardRef<SwipeModalRef, SwipeModalProps>(({
 
                 {children}
             </div>
-        </div>
+        </StyledSwipeModal>
     );
 })
 
