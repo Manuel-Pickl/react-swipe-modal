@@ -1,7 +1,7 @@
 {
   "name": "react-swipe-modal",
   "private": false,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "type": "module",
   "types": "dist/react-swipe-modal.d.ts",
