@@ -5,6 +5,8 @@ interface SwipeModalStylesProps {
     $animationDurationInMs: string;
     $backdropOpacity: number;
     $barColor: string;
+    $borderRadius: string;
+    $maxWidth: string;
     $modalColor: string;
 }
 
@@ -23,11 +25,13 @@ export const StyledSwipeModal = styled.div<SwipeModalStylesProps>`
 
   .modal {
     position: fixed;
-    left: 0;
+    left: 50%;
     bottom: 0;
+    translate: -50% 0;
     width: 100vw;
+    max-width: ${(props) => props.$maxWidth};
     background-color: ${(props) => props.$modalColor};
-    border-radius: 1.2rem 1.2rem 0 0;
+    border-radius: ${(props) => props.$borderRadius} ${(props) => props.$borderRadius} 0 0;
     transform: translateY(100%);
 
     .bar-touchzone {

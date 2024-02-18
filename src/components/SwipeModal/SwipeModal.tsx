@@ -6,6 +6,11 @@ export interface SwipeModalProps {
     children?: React.ReactNode;
 
     // functionality
+    /**
+     * The trigger to close the modal. Default is `'swipe'`.
+     * - `'swipe'` means that modal will close when modal was swiped down faster than `closeTriggerSpeed`.
+     * - `'height'` means that modal will close when height of modal is less than `closeTriggerPercentage`.
+     */
     closeTrigger?: "swipe"|"height";
     closeTriggerPercentage?: number;
     closeTriggerSpeed?: number;
@@ -16,7 +21,9 @@ export interface SwipeModalProps {
     animationDuration?: number;
     backdropOpacity?: number;
     barColor?: string;
+    borderRadius?: string;
     hideBar?: boolean;
+    maxWidth?: string;
     modalColor?: string;
     
     // additonal styling
@@ -48,7 +55,9 @@ const SwipeModal = forwardRef<SwipeModalRef, SwipeModalProps>(({
     animationDuration = 350, // ms
     backdropOpacity = 0.3,
     barColor = "dimgrey",
+    borderRadius = "1.2rem",
     hideBar = false,
+    maxWidth = "100vw",
     modalColor = "hsl(0, 0%, 10%)", // bright black
     
     // additonal styling
@@ -65,6 +74,8 @@ const SwipeModal = forwardRef<SwipeModalRef, SwipeModalProps>(({
     const backdropRef = useRef<HTMLDivElement>(null);
     const resetPositionRef = useRef<number>(0);
     
+    //#region visual functionality
+
     useEffect(() => {
         initializePositionInterval();        
 
@@ -129,7 +140,9 @@ const SwipeModal = forwardRef<SwipeModalRef, SwipeModalProps>(({
         }, animationDuration);
     }
 
-    //#region touch functionality
+    //#endregion
+
+    //#region gesture functionality
 
     const barRef = useRef<HTMLDivElement>(null)
     const isDraggingRef = useRef<boolean>(false);
@@ -338,6 +351,8 @@ const SwipeModal = forwardRef<SwipeModalRef, SwipeModalProps>(({
             $animationDurationInMs={`${animationDuration}ms`}
             $backdropOpacity={backdropOpacity}
             $barColor={barColor}
+            $borderRadius={borderRadius}
+            $maxWidth={maxWidth}
             $modalColor={modalColor}
         >
             <div
