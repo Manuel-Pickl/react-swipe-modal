@@ -1,5 +1,6 @@
-// SwipeModal.d.ts
+// SwipeModal.types.ts
 import * as React from 'react';
+import SwipeModal from './SwipeModal';
 
 export interface SwipeModalProps {
   children?: React.ReactNode;
@@ -117,7 +118,5 @@ export interface SwipeModalRef {
    */
   close: () => void;
 }
-
-declare const SwipeModal: React.ForwardRefExoticComponent<SwipeModalProps & React.RefAttributes<SwipeModalRef>>;
 
 export default SwipeModal;
