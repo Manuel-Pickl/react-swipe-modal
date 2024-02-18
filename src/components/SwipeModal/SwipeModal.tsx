@@ -2,7 +2,7 @@
 import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from "react";
 import "./SwipeModal.scss";
 
-interface SwipeModalProps {
+export interface SwipeModalProps {
     children?: React.ReactNode;
 
     // functionality

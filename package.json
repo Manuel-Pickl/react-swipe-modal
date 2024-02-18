@@ -3,12 +3,7 @@
   "private": false,
   "version": "0.0.1",
   "type": "module",
-  "main": "dist/react-swipe-modal.js",
-  "files": [
-    "dist",
-    "README.md",
-    "LICENSE"
-  ],
+  "main": "src/export.tsx",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
