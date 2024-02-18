@@ -80,7 +80,7 @@ Name                  | Description
 
 Show your ❤️ and support by giving a ⭐. Any suggestions are welcome!
 
-You can find more from me on my Homepage [manuelpickl.com](https://manuelpickl.com/).
+You can find more from me on my homepage [manuelpickl.com](https://manuelpickl.com/).
 
 ## License
 
