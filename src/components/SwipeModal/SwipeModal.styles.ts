@@ -1,7 +1,7 @@
 // SwipeModalStyles.ts
 import styled from 'styled-components';
 
-interface SwipeModalStylesProps {
+interface StyledSwipeModalProps {
     $animationDurationInMs: string;
     $backdropOpacity: number;
     $barColor: string;
@@ -10,7 +10,7 @@ interface SwipeModalStylesProps {
     $modalColor: string;
 }
 
-export const StyledSwipeModal = styled.div<SwipeModalStylesProps>`
+export const StyledSwipeModal = styled.div<StyledSwipeModalProps>`
   .backdrop {
     position: fixed;
     top: 0;
