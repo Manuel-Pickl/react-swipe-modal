@@ -4,40 +4,6 @@ import SwipeModal from './SwipeModal';
 
 export interface SwipeModalProps {
   children?: React.ReactNode;
-
-  // functionality
-  /**
-   * The trigger to close the modal.
-   * - `'swipe'` means that modal will close when modal was swiped down faster than `closeTriggerSpeed`.
-   * - `'height'` means that modal will close when height of modal is less than `closeTriggerPercentage`.
-   *
-   * The default is `'swipe'`.
-   */
-  closeTrigger?: 'swipe'|'height';
-  /**
-   * The height in percent that triggers the modal to close when using the `closeTrigger` `'height'`.
-   * 
-   * The default is `50`.
-   */
-  closeTriggerPercentage?: number;
-  /**
-   * The swipe speed in px/s that triggers the modal to close when using the `closeTrigger` `'swipe'`.
-   * 
-   * The default is `500`.
-   */
-  closeTriggerSpeed?: number;
-  /**
-   * Set to `true` if you don't want to allow swiping.
-   * 
-   * The default is `false`.
-   */
-  disableSwipe?: boolean;
-  /**
-   * Set to `true` if you want to allow swiping only from the bar.
-   * 
-   * The default is `false`.
-   */
-  swipeOnlyFromBar?: boolean;
   
   // styling
   /**
@@ -83,6 +49,40 @@ export interface SwipeModalProps {
    */
   modalColor?: string;
   
+  // functionality
+  /**
+   * The trigger to close the modal.
+   * - `'swipe'` means that modal will close when modal was swiped down faster than `closeTriggerSpeed`.
+   * - `'height'` means that modal will close when height of modal is less than `closeTriggerPercentage`.
+   *
+   * The default is `'swipe'`.
+   */
+  closeTrigger?: 'swipe'|'height';
+  /**
+   * The height in percent that triggers the modal to close when using the `closeTrigger` `'height'`.
+   * 
+   * The default is `50`.
+   */
+  closeTriggerPercentage?: number;
+  /**
+   * The swipe speed in px/s that triggers the modal to close when using the `closeTrigger` `'swipe'`.
+   * 
+   * The default is `500`.
+   */
+  closeTriggerSpeed?: number;
+  /**
+   * Set to `true` if you don't want to allow swiping.
+   * 
+   * The default is `false`.
+   */
+  disableSwipe?: boolean;
+  /**
+   * Set to `true` if you want to allow swiping only from the bar.
+   * 
+   * The default is `false`.
+   */
+  swipeOnlyFromBar?: boolean;
+
   // additonal styling
   /**
    * Additional styles to be applied to the backdrop.

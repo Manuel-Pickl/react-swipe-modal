@@ -5,13 +5,6 @@ import { SwipeModalRef, SwipeModalProps } from "./SwipeModal.types";
 
 const SwipeModal = forwardRef<SwipeModalRef, SwipeModalProps>(({
     children,
-    
-    // functionality
-    closeTrigger = "swipe",
-    closeTriggerPercentage = 50, // in %
-    closeTriggerSpeed = 500, // px/s
-    disableSwipe = false,
-    swipeOnlyFromBar = false,
 
     // styling
     animationDuration = 350, // ms
@@ -22,6 +15,13 @@ const SwipeModal = forwardRef<SwipeModalRef, SwipeModalProps>(({
     maxWidth = "100vw",
     modalColor = "hsl(0, 0%, 10%)", // bright black
     
+    // functionality
+    closeTrigger = "swipe",
+    closeTriggerPercentage = 50, // in %
+    closeTriggerSpeed = 500, // px/s
+    disableSwipe = false,
+    swipeOnlyFromBar = false,
+
     // additonal styling
     backdropStyle,
     barStyle,
@@ -64,6 +64,7 @@ const SwipeModal = forwardRef<SwipeModalRef, SwipeModalProps>(({
             return;
         }
 
+        backdrop.style.opacity = "0";   
         backdrop.style.display = "block";
         requestAnimationFrame(() => {
             backdrop.style.opacity = backdropOpacity.toString();   
@@ -138,7 +139,7 @@ const SwipeModal = forwardRef<SwipeModalRef, SwipeModalProps>(({
             element.removeEventListener('touchmove', onTouchMove);
             element.removeEventListener('touchend', onTouchEnd);
         };
-    }, [modalRef.current]);
+    }, [modalRef.current, closeTrigger, closeTriggerPercentage, closeTriggerSpeed, disableSwipe, swipeOnlyFromBar]);
 
     function addPosition() {
         const currentY = getPosition();
