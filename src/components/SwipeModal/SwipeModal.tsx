@@ -34,7 +34,6 @@ const SwipeModal = forwardRef<SwipeModalRef, SwipeModalProps>(({
     const [visible, setVisible] = useState(false);
     const modalRef = useRef<HTMLDivElement>(null);
     const backdropRef = useRef<HTMLDivElement>(null);
-    const resetPositionRef = useRef<number>(0);
     
     //#region visual functionality
 
@@ -115,6 +114,23 @@ const SwipeModal = forwardRef<SwipeModalRef, SwipeModalProps>(({
     const touchOffset = useRef<number>(0);
     const relevantTimeForCalculations = 300;
     const positionInterval = useRef<NodeJS.Timeout>();
+    const resetPositionRef = useRef<number>(0);
+    const [resizeTrigger, setResizeTrigger] = useState(0);
+    
+    useEffect(() => {
+        const handleResize = () => setResizeTrigger(value => value + 1);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    useEffect(() => {
+        const modal = modalRef.current;
+        if (!modal) {
+            return;
+        }
+        resetPositionRef.current = document.documentElement.clientHeight - modal.getBoundingClientRect().height
+        console.log(resetPositionRef.current)
+    }, [resizeTrigger, modalRef.current]);
 
     useEffect(() => {
         if (disableSwipe) {
@@ -127,8 +143,6 @@ const SwipeModal = forwardRef<SwipeModalRef, SwipeModalProps>(({
         if (!modal || !element) {
             return;
         }
-
-        resetPositionRef.current = document.documentElement.clientHeight - modal.getBoundingClientRect().height
 
         element.addEventListener('touchstart', onTouchStart);
         element.addEventListener('touchmove', onTouchMove);

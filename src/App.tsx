@@ -138,8 +138,9 @@ function App() {
                     swipeOnlyFromBar={swipeOnlyFromBar}
 
                     backdropStyle={{ position: "absolute", height: "100%", width: "100%"}}
+                    modalStyle={{ position: "absolute", maxHeight: "60%" }}
                 >
-                    <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
                 </SwipeModal>
             </div>
         </div>
