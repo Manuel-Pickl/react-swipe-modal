@@ -30,9 +30,8 @@ import SwipeModal, { SwipeModalRef } from 'react-swipe-modal';
 
 const App = () => {
     const modalRef = useRef<SwipeModalRef>(null);
-
+    
     const showModal = () => modalRef.current?.show();
-    const hideModal = () => modalRef.current?.hide();
 
     return (
         <SwipeModal ref={modalRef}>
@@ -47,12 +46,6 @@ const App = () => {
  Name                       | Type                      | Default value | Description       
 ----------------------------|---------------------------|---------------|---------------------
  `children`                 | ReactNode\ReactNode[]     | **required**  | The content to be rendered inside the modal.
- **Functionality**          |                           |               |
- `closeTrigger`             | 'swipe'\|'height'         | 'swipe'       | The trigger to close the modal.<br>`'swipe'` means that modal will close when modal was swiped down faster than `closeTriggerSpeed`.<br>`'height'` means that modal will close when height of modal is less than `closeTriggerPercentage`.
- `closeTriggerPercentage`   | number                    | 50            | The height in percent that triggers the modal to close when using the `closeTrigger` `'height'`.
- `closeTriggerSpeed`        | number                    | 500           | The swipe speed in px/s that triggers the modal to close when using the `closeTrigger` `'swipe'`.
- `disableSwipe`             | boolean                   | false         | Set to `true` if you don't want to allow swiping.
- `swipeOnlyFromBar`         | boolean                   | false         | Set to `true` if you want to allow swiping only from the bar.
  **Styling**                |                           |               |
  `animationDuration`        | number                    | 300           | The duration of the modal's opening and closing animation in milliseconds.
  `backdropOpacity`          | number                    | 0.3           | The opacity of the modal's backdrop.
@@ -61,6 +54,12 @@ const App = () => {
  `hideBar`                  | boolean                   | false         | Set to `true` to hide the bar at the top of the modal.
  `maxWidth`                 | string                    | '100vw'       | The maximum width of the modal.
  `modalColor`               | string                    | 'black'       | The background color of the modal.
+ **Functionality**          |                           |               |
+ `closeTrigger`             | 'swipe'\|'height'         | 'swipe'       | The trigger to close the modal.<br>`'swipe'` means that modal will close when modal was swiped down faster than `closeTriggerSpeed`.<br>`'height'` means that modal will close when height of modal is less than `closeTriggerPercentage`.
+ `closeTriggerPercentage`   | number                    | 50            | The height in percent that triggers the modal to close when using the `closeTrigger` `'height'`.
+ `closeTriggerSpeed`        | number                    | 500           | The swipe speed in px/s that triggers the modal to close when using the `closeTrigger` `'swipe'`.
+ `disableSwipe`             | boolean                   | false         | Set to `true` if you don't want to allow swiping.
+ `swipeOnlyFromBar`         | boolean                   | false         | Set to `true` if you want to allow swiping only from the bar.
  **Additional Styling**     |                           |               |
  `backdropStyle`            | ViewStyle\|ViewStyle[]    |               | Additional styles to be applied to the backdrop.
  `barStyle`                 | ViewStyle\|ViewStyle[]    |               | Additional styles to be applied to the modal.
