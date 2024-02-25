@@ -1,5 +1,6 @@
 // SwipeModal.types.ts
 import * as React from 'react';
+// @ts-ignore
 import SwipeModal from './SwipeModal';
 
 export interface SwipeModalProps {
