@@ -1,5 +1,5 @@
 {
-  "version": "0.2.3",
+  "version": "1.0.0",
   "name": "react-swipe-modal",
   "description": "A swipeable modal for the browser",
   "license": "MIT",
@@ -34,7 +34,8 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && shx cp src/components/SwipeModal/SwipeModal.types.ts dist/react-swipe-modal.types.ts",
+    "build": "tsc && vite build",
+    "build:package": "tsc && vite build && shx cp src/components/SwipeModal/SwipeModal.types.ts dist/react-swipe-modal.types.ts",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },

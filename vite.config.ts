@@ -1,10 +1,12 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
+const buildPackage = process.env.npm_lifecycle_event === 'build:package';
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  build: {
+  build: !buildPackage ? {} : {
     lib: {
       entry: 'src/components/SwipeModal/SwipeModal.tsx',
       name: 'SwipeModal',
