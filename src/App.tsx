@@ -14,11 +14,11 @@ function App() {
     // styling
     const [animationDuration, setAnimationDuration] = useState<number>(350);
     const [backdropOpacity, setBackdropOpacity] = useState<number>(0.3);
-    const [barColor, setBarcolor] = useState<string>("#696969");
+    const [barColor, setBarcolor] = useState<string>("#fa8072");
     const [borderRadius, setBorderRadius] = useState<string>("1.3rem");
     const [hideBar, setHideBar] = useState<boolean>(false);
     const [maxWidth, setMaxWidth] = useState<string>("100vw");
-    const [modalColor, setModalColor] = useState<string>("#1a1a1a");
+    const [modalColor, setModalColor] = useState<string>("#ffffff");
     
     // functionality
     const [closeTrigger, setCloseTrigger] = useState<'swipe'|'height'>('swipe')
@@ -170,7 +170,7 @@ function App() {
                     backdropStyle={{ position: "absolute", height: "100%", width: "100%"}}
                     modalStyle={{ position: "absolute", maxHeight: "60%" }}
                 >
-                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
                 </SwipeModal>
             </div>
         </div>

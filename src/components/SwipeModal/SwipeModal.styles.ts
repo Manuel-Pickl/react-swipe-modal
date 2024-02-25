@@ -34,6 +34,23 @@ export const StyledSwipeModal = styled.div<StyledSwipeModalProps>`
     background-color: ${(props) => props.$modalColor};
     border-radius: ${(props) => props.$borderRadius} ${(props) => props.$borderRadius} 0 0;
     transform: translateY(100%);
+    animation:
+      decreaseWidth 350ms forwards 3s,
+      decreaseBorder 350ms forwards 6s;
+
+    @keyframes decreaseWidth {
+      from {
+        width: 100vw;
+      }
+      to {
+        width: 60vw;
+      }
+    }
+    @keyframes decreaseBorder {
+      to {
+        border-radius: 0;
+      }
+    }    
 
     .bar-touchzone {
       display: grid;
