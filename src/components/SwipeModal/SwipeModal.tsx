@@ -200,6 +200,9 @@ const SwipeModal = forwardRef<SwipeModalRef, SwipeModalProps>(({
     }
 
     function onTouchMove(e: TouchEvent) {
+        // to prevent the default reload functionality of chrome
+        e.preventDefault();
+        
         const modal = modalRef.current;
         if (!modal) {
             return;
