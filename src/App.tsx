@@ -13,7 +13,7 @@ function App() {
 
     // styling
     const [animationDuration, setAnimationDuration] = useState<number>(350);
-    const [backdropOpacity, setBackdropOpacity] = useState<number>(0.3);
+    const [backdropOpacity, setBackdropOpacity] = useState<number>(0.8);
     const [barColor, setBarcolor] = useState<string>("#696969");
     const [borderRadius, setBorderRadius] = useState<string>("1.3rem");
     const [hideBar, setHideBar] = useState<boolean>(false);
