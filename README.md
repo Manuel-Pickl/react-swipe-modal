@@ -2,7 +2,10 @@
 
 🌀 A swipeable modal for the browser, just like on your smartphone.
 
-![swipe down](https://media.tenor.com/o656qFKDzeUAAAAM/rick-astley-never-gonna-give-you-up.gif)
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem">
+    <img src="./src/assets/mindforge.gif">
+    <img src="./src/assets/demo.gif">
+</div>
 
 ## Features
 
