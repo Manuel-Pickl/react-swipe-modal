@@ -21,6 +21,15 @@ export const StyledSwipeModal = styled.div<StyledSwipeModalProps>`
     opacity: ${(props) => props.$backdropOpacity};
     transition: opacity ${(props) => props.$animationDurationInMs};
     display: none;
+
+    animation:
+      changeColor2 350ms forwards 5.5s;
+
+    @keyframes changeColor2 {
+      to {
+        opacity: 0.8;
+      }
+    }
   }
 
   .modal {
@@ -35,9 +44,15 @@ export const StyledSwipeModal = styled.div<StyledSwipeModalProps>`
     border-radius: ${(props) => props.$borderRadius} ${(props) => props.$borderRadius} 0 0;
     transform: translateY(100%);
     animation:
-      decreaseWidth 350ms forwards 3s,
-      decreaseBorder 350ms forwards 6s;;
+      changeColor 350ms forwards 2s,
+      decreaseWidth 350ms forwards 4s,
+      decreaseBorder 350ms forwards 8s;
 
+    @keyframes changeColor {
+      to {
+          background-color: #ffffff;
+        }
+    }
     @keyframes decreaseWidth {
       from {
         width: 100vw;
@@ -62,6 +77,15 @@ export const StyledSwipeModal = styled.div<StyledSwipeModalProps>`
         margin-block: 0.4rem;
         border-radius: 2rem;
         background-color: ${(props) => props.$barColor};
+
+        animation:
+          changeColor1 350ms forwards 2s;
+
+        @keyframes changeColor1 {
+          to {
+            background-color: #fa8072;
+          }
+        }
       }
     }
   }
