@@ -44,7 +44,7 @@ export const StyledSwipeModal = styled.div<StyledSwipeModalProps>`
     border-radius: ${(props) => props.$borderRadius} ${(props) => props.$borderRadius} 0 0;
     transform: translateY(100%);
     animation:
-    decreaseWidth 350ms forwards 2s,
+    decreaseWidth 350ms forwards 4s,
       changeColor 350ms forwards 4s,
       decreaseBorder 350ms forwards 8s;
 
