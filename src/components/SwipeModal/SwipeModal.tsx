@@ -120,6 +120,12 @@ const SwipeModal = forwardRef<SwipeModalRef, SwipeModalProps>(({
     useEffect(() => {
         const handleResize = () => setResizeTrigger(value => value + 1);
         window.addEventListener('resize', handleResize);
+        
+        const observer = new ResizeObserver(handleResize);
+        if (modalRef.current) {
+            observer.observe(modalRef.current);
+        }
+        
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
