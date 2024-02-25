@@ -2,10 +2,7 @@
 
 🌀 A swipeable modal for the browser, just like on your smartphone.
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem">
-    <img src="./src/assets/mindforge.gif">
-    <img src="./src/assets/demo.gif">
-</div>
+<img src="./src/assets/mindforge.gif" alt="modal example 1" width="48%"> <img src="./src/assets/demo.gif" alt="modal example 1" width="48%">
 
 ## Features
 
