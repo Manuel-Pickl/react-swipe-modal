@@ -1,4 +1,9 @@
+:root {
+    font-family: system-ui, sans-serif;
+}
+
 * {
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
@@ -11,28 +16,58 @@
     overflow: hidden;
 
     h1 {
+        padding-top: 1rem;
         text-align: center;
     }
 
-    .options {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        gap: 0.8rem;
-        border-bottom: solid 1px black;
-        padding: 1rem;
+    .info {
+        color: dimgrey;
+        text-align: center;
+    }
 
-        h2 {
-            grid-column: span 2;
-        }        
-
-        .input {
-            display: flex;
+    .options-group {
+        --transitionDuration: 350ms;
+        padding: 0.5rem;
+        
+        .header {
+            padding: 0.5rem;
+            display: flex; 
+            gap: 0.4rem;
+            align-items: center;
+            border-top: solid 1px dimgrey;
             
-            select, input {
-                flex: 1;
+            .icon {
+                transition: all var(--transitionDuration);
             }
-            input[type=checkbox] {
-                flex: 0;
+        }
+
+        .options {
+            height: 100%;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.4rem;
+            overflow: hidden;
+            transition: max-height var(--transitionDuration);
+    
+            &>label {
+                width: max-content;
+                padding: 0.2rem 0.4rem;
+                background-color: hsl(0, 0%, 90%);
+                border-radius: 0.5rem;
+            }
+    
+            .input {
+                display: flex;
+                
+                select, input {
+                    flex: 1;
+                }
+                input[type=checkbox] {
+                    flex: 0;
+                }
+                input[type=range] {
+                    margin-inline: 0.5rem;
+                }
             }
         }
     }
@@ -40,6 +75,7 @@
     .test-window {
         position: relative;
         flex: 1;
+        border-top: solid 1px black;
 
         button {
             display: block;

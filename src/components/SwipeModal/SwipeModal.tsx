@@ -128,8 +128,8 @@ const SwipeModal = forwardRef<SwipeModalRef, SwipeModalProps>(({
         if (!modal) {
             return;
         }
+        
         resetPositionRef.current = document.documentElement.clientHeight - modal.getBoundingClientRect().height
-        console.log(resetPositionRef.current)
     }, [resizeTrigger, modalRef.current]);
 
     useEffect(() => {
