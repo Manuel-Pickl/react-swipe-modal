@@ -2,7 +2,10 @@
 
 🌀 A swipeable modal for the browser, just like on your smartphone.
 
-<img src="./src/assets/mindforge.gif" alt="modal example 1" width="48%"> <img src="./src/assets/demo.gif" alt="modal example 1" width="48%">
+<div style="flex-direction:row;">
+    <img src="./src/assets/mindforge.gif" alt="modal example 1" width="256px">
+    <img src="./src/assets/demo.gif" alt="modal example 2" width="256px">
+</div>
 
 ## Features
 
@@ -14,6 +17,7 @@
 
 ## Demo
 
+Try it out right [here](https://react-swipe-modal.netlify.app/)!
 
 
 ## Installation
