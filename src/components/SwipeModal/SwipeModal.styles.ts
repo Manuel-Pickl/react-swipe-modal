@@ -23,7 +23,7 @@ export const StyledSwipeModal = styled.div<StyledSwipeModalProps>`
     display: none;
 
     animation:
-      changeColor2 350ms forwards 5.5s;
+      changeColor2 350ms forwards 5s;
 
     @keyframes changeColor2 {
       to {
