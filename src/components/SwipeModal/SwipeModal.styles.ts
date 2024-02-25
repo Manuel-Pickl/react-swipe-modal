@@ -30,6 +30,7 @@ export const StyledSwipeModal = styled.div<StyledSwipeModalProps>`
     translate: -50% 0;
     width: 100vw;
     max-width: ${(props) => props.$maxWidth};
+    color: hsl(0, 0%, 95%);
     background-color: ${(props) => props.$modalColor};
     border-radius: ${(props) => props.$borderRadius} ${(props) => props.$borderRadius} 0 0;
     transform: translateY(100%);

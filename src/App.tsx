@@ -8,8 +8,8 @@ import { faCircleInfo, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
     const swipeModalRef = useRef<SwipeModalRef>(null);
-    const [stylingVisible, setStylingVisible] = useState<boolean>(true);
-    const [functionalityVisible, setFunctionalityVisible] = useState<boolean>(true);
+    const [stylingVisible, setStylingVisible] = useState<boolean>(false);
+    const [functionalityVisible, setFunctionalityVisible] = useState<boolean>(false);
 
     // styling
     const [animationDuration, setAnimationDuration] = useState<number>(350);
@@ -170,7 +170,7 @@ function App() {
                     backdropStyle={{ position: "absolute", height: "100%", width: "100%"}}
                     modalStyle={{ position: "absolute", maxHeight: "60%" }}
                 >
-                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
                 </SwipeModal>
             </div>
         </div>
