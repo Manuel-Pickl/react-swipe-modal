@@ -36,7 +36,7 @@ export const StyledSwipeModal = styled.div<StyledSwipeModalProps>`
     transform: translateY(100%);
     animation:
       decreaseWidth 350ms forwards 3s,
-      decreaseBorder 350ms forwards 6s;
+      decreaseBorder 350ms forwards 6s;;
 
     @keyframes decreaseWidth {
       from {
